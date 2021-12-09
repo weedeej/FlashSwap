@@ -45,10 +45,11 @@ contract Flashloan is FlashLoanReceiverBase {
         lendingPool.flashLoan(address(this), _asset, amount, data);
     }
 
-    function test(address from, address to, uint amt) public view returns(uint256 expected, uint256 worst)
+    function test(address from, address to, uint amt) public returns(uint256 returnVal)
     {
+      bytes memory data = "";
       KyberNetwork K = KyberNetwork(0x692f391bCc85cefCe8C237C01e1f636BbD70EA4D);
-      return K.swapTokensForExactTokens(from, amt, to, 1);
+      return K.tradeWithHint(address(this), ERC20(from), amt, ERC20(to), 0xBd07468fe5C27aFce46a49dFe78f0D0e2416297A, 1 ether, 1, 0xBd07468fe5C27aFce46a49dFe78f0D0e2416297A, data);
     }
   // Uniswap V2 router  
   // 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D

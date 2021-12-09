@@ -175,16 +175,11 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "expected",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "worst",
+						"name": "returnVal",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -269,10 +264,10 @@
 	},
 	"sources": {
 		"Flashloan.sol": {
-			"keccak256": "0x6976c25e3d514404653d8acf54224c61adbbd8c4fef5538c2cd2b901e90afe8b",
+			"keccak256": "0xb9029018acaf7613df3041e5d821dc4109b1bca9a1a7c8f5e8b4891258a22cd0",
 			"urls": [
-				"bzz-raw://f02743580c3719f1e78eef63522872bd86f4b9b757c50d6cbfd8a058dece157c",
-				"dweb:/ipfs/QmdeBLeRvUecP3jBfwGG13ruMvoUsUZicThwCkE3cvJPuw"
+				"bzz-raw://e42b05340fd9cbebfb885ddaf95e3d0dfc5f196d5ca2ac7a9e46bbd330e2ad15",
+				"dweb:/ipfs/QmXNa9J9dJ74SHNsisPaXMkfadZho1xpMNxo7rvE6bnrZh"
 			]
 		},
 		"node_modules/@openzeppelin/contracts/access/Ownable.sol": {
@@ -332,10 +327,10 @@
 			]
 		},
 		"src/Contracts/KyberNetwork.sol": {
-			"keccak256": "0xbf1a72b7ce8b506136fa75588a0ce5a4d8fe46989ccbaf30b3792e3aba235ada",
+			"keccak256": "0x121866320cdcb8ec12b07bd447fd69a65401db2a2a440985676e0d3274ab49a4",
 			"urls": [
-				"bzz-raw://9de9672b7355a840c52adfead93c0ef8b57711a1be96a385883b8631adacc512",
-				"dweb:/ipfs/QmQqTaTktJGtw1rfgtomPsouEHZimDfjHSqq2AHeULzUR2"
+				"bzz-raw://7789f1b26f0d6dfd31ef858d3cbcddc2a6eb4aaa8a9fcdaf78053858f7a3a081",
+				"dweb:/ipfs/Qma1G5bQDp1myCdvCwdSvKJv1mWZyPGf7MP8zLVx32Txr4"
 			]
 		},
 		"src/Interfaces/FlashLoanReceiverBase.sol": {

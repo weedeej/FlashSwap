@@ -588,8 +588,6 @@ interface IKyberNetworkProxy {
         address platformWallet,
         uint256 platformFeeBps
     );
-
-    function swapTokenToToken(ERC20 src, uint srcAmount, ERC20 dest, uint minConversionRate) public returns(uint);
     /// @notice backward compatible
     function tradeWithHint(
         ERC20 src,

@@ -335,10 +335,10 @@
 			]
 		},
 		"src/Contracts/KyberNetwork.sol": {
-			"keccak256": "0xbf1a72b7ce8b506136fa75588a0ce5a4d8fe46989ccbaf30b3792e3aba235ada",
+			"keccak256": "0x121866320cdcb8ec12b07bd447fd69a65401db2a2a440985676e0d3274ab49a4",
 			"urls": [
-				"bzz-raw://9de9672b7355a840c52adfead93c0ef8b57711a1be96a385883b8631adacc512",
-				"dweb:/ipfs/QmQqTaTktJGtw1rfgtomPsouEHZimDfjHSqq2AHeULzUR2"
+				"bzz-raw://7789f1b26f0d6dfd31ef858d3cbcddc2a6eb4aaa8a9fcdaf78053858f7a3a081",
+				"dweb:/ipfs/Qma1G5bQDp1myCdvCwdSvKJv1mWZyPGf7MP8zLVx32Txr4"
 			]
 		}
 	},

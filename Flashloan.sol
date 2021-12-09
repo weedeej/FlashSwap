@@ -3,12 +3,8 @@ pragma solidity ^0.6.6;
 import "./src/Interfaces/FlashLoanReceiverBase.sol";
 import "./src/Interfaces/ILendingPoolAddressesProvider.sol";
 import "./src/Interfaces/ILendingPool.sol";
-<<<<<<< HEAD
 import "./src/Interfaces/IUniSwap.sol";
 import "./src/Contracts/KyberNetwork.sol";
-=======
-
->>>>>>> parent of 0563a77 (28/11/2021 10:43AM)
 contract Flashloan is FlashLoanReceiverBase {
 
     constructor(address _addressProvider) FlashLoanReceiverBase(_addressProvider) public {}
@@ -48,7 +44,6 @@ contract Flashloan is FlashLoanReceiverBase {
         ILendingPool lendingPool = ILendingPool(addressesProvider.getLendingPool());
         lendingPool.flashLoan(address(this), _asset, amount, data);
     }
-<<<<<<< HEAD
 
     function test(address from, address to, uint amt) public view returns(uint256 expected, uint256 worst)
     {
@@ -63,6 +58,3 @@ contract Flashloan is FlashLoanReceiverBase {
   address private constant FACTORY = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;
   event Log(string message, uint val);
 }
-=======
-}
->>>>>>> parent of 0563a77 (28/11/2021 10:43AM)

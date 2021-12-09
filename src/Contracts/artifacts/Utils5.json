@@ -1,0 +1,68 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220887f4d54ca73e43ea201847a5aff0efad327ba7185293353c3c39a22aafd97ce64736f6c634300060c0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP9 PUSH32 0x4D54CA73E43EA201847A5AFF0EFAD327BA7185293353C3C39A22AAFD97CE6473 PUSH16 0x6C634300060C00330000000000000000 ",
+			"sourceMap": "5970:5408:6:-:0;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "6080604052600080fdfea2646970667358221220887f4d54ca73e43ea201847a5aff0efad327ba7185293353c3c39a22aafd97ce64736f6c634300060c0033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP9 PUSH32 0x4D54CA73E43EA201847A5AFF0EFAD327BA7185293353C3C39A22AAFD97CE6473 PUSH16 0x6C634300060C00330000000000000000 ",
+			"sourceMap": "5970:5408:6:-:0;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "12600",
+				"executionCost": "66",
+				"totalCost": "12666"
+			},
+			"internal": {
+				"calcDestAmount(contract IERC20,contract IERC20,uint256,uint256)": "infinite",
+				"calcDstQty(uint256,uint256,uint256,uint256)": "infinite",
+				"calcRateFromQty(uint256,uint256,uint256,uint256)": "infinite",
+				"calcSrcAmount(contract IERC20,contract IERC20,uint256,uint256)": "infinite",
+				"calcSrcQty(uint256,uint256,uint256,uint256)": "infinite",
+				"getBalance(contract IERC20,address)": "infinite",
+				"getDecimals(contract IERC20)": "infinite",
+				"getUpdateDecimals(contract IERC20)": "infinite",
+				"minOf(uint256,uint256)": "infinite",
+				"setDecimals(contract IERC20)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

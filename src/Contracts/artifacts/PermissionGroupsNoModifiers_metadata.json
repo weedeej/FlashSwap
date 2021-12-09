@@ -1,0 +1,327 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "previousAdmin",
+						"type": "address"
+					}
+				],
+				"name": "AdminClaimed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newAlerter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isAdd",
+						"type": "bool"
+					}
+				],
+				"name": "AlerterAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newOperator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isAdd",
+						"type": "bool"
+					}
+				],
+				"name": "OperatorAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "pendingAdmin",
+						"type": "address"
+					}
+				],
+				"name": "TransferAdminPending",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAlerter",
+						"type": "address"
+					}
+				],
+				"name": "addAlerter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOperator",
+						"type": "address"
+					}
+				],
+				"name": "addOperator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "claimAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAlerters",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOperators",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingAdmin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "alerter",
+						"type": "address"
+					}
+				],
+				"name": "removeAlerter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "removeOperator",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "transferAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "transferAdminQuickly",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"claimAdmin()": {
+					"details": "Allows the pendingAdmin address to finalize the change admin process."
+				},
+				"transferAdmin(address)": {
+					"details": "Allows the current admin to set the pendingAdmin address",
+					"params": {
+						"newAdmin": "The address to transfer ownership to"
+					}
+				},
+				"transferAdminQuickly(address)": {
+					"details": "Allows the current admin to set the admin in one tx. Useful initial deployment.",
+					"params": {
+						"newAdmin": "The address to transfer ownership to."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/Contracts/KyberNetwork.sol": "PermissionGroupsNoModifiers"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+			"keccak256": "0x2fedd3a10f0d561aa6edfb743d3a854a3e92f7ff3d7f294de259cd779177e134",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53ecf080278d4c9be7d289c04a029d58f2e7e48c5a39b067ee9af3be7360bb95",
+				"dweb:/ipfs/QmeRMHESDb6PnYBiYhpkQnHQSjZAdtWJwPxZYfNuXpfZkL"
+			]
+		},
+		"node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0x977b83d350bd4961dcbb2804174a0cc15685c76a575f09f34e2e016029cacabe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a51762f894dbeb296462fb00d49482debb1b029b76f5e6df8528828bfce26b97",
+				"dweb:/ipfs/QmYh3cubEZEMCJQFEBmHCtaP3JMAuZ4WNpQ5QcTgq59NvX"
+			]
+		},
+		"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x5c99c26cba04882d6cf71f2004af17ecd366d1edd281f94645ead365fbfcf16e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7890857ce2b63821bb357de01455247c3dcfb03c032a0aaeebcc373b7dd51cf5",
+				"dweb:/ipfs/QmbpNvNdrNQq29k1JjHCE5onRUrmz19JvYcSnbW3gGWvZA"
+			]
+		},
+		"node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
+			"keccak256": "0xf12dfbe97e6276980b83d2830bb0eb75e0cf4f3e626c2471137f82158ae6a0fc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3a849c2d95e85463909e5b5c920b13e7a11216ca14127085e16d22b9379d52a",
+				"dweb:/ipfs/QmUg3CZDbCCcQdroEpexBy5ZFd5vD1UWijWQq9qHZjtJNQ"
+			]
+		},
+		"node_modules/@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c",
+				"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN"
+			]
+		},
+		"node_modules/@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"src/Contracts/KyberNetwork.sol": {
+			"keccak256": "0xbf1a72b7ce8b506136fa75588a0ce5a4d8fe46989ccbaf30b3792e3aba235ada",
+			"urls": [
+				"bzz-raw://9de9672b7355a840c52adfead93c0ef8b57711a1be96a385883b8631adacc512",
+				"dweb:/ipfs/QmQqTaTktJGtw1rfgtomPsouEHZimDfjHSqq2AHeULzUR2"
+			]
+		}
+	},
+	"version": 1
+}

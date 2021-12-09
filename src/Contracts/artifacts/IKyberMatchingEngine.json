@@ -1,0 +1,179 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"doMatch(address,address,uint256[],uint256[],uint256[])": "84d174bc",
+			"getNegligibleRateDiffBps()": "bd12313a",
+			"getTradingReserves(address,address,bool,bytes)": "910ffc71",
+			"setKyberStorage(address)": "a0d2a850",
+			"setNegligibleRateDiffBps(uint256)": "905c4418"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "src",
+					"type": "address"
+				},
+				{
+					"internalType": "contract IERC20",
+					"name": "dest",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "srcAmounts",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "feesAccountedDestBps",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "rates",
+					"type": "uint256[]"
+				}
+			],
+			"name": "doMatch",
+			"outputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "reserveIndexes",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getNegligibleRateDiffBps",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "src",
+					"type": "address"
+				},
+				{
+					"internalType": "contract IERC20",
+					"name": "dest",
+					"type": "address"
+				},
+				{
+					"internalType": "bool",
+					"name": "isTokenToToken",
+					"type": "bool"
+				},
+				{
+					"internalType": "bytes",
+					"name": "hint",
+					"type": "bytes"
+				}
+			],
+			"name": "getTradingReserves",
+			"outputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				},
+				{
+					"internalType": "uint256[]",
+					"name": "splitValuesBps",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "enum IKyberMatchingEngine.ProcessWithRate",
+					"name": "processWithRate",
+					"type": "uint8"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "contract IKyberStorage",
+					"name": "_kyberStorage",
+					"type": "address"
+				}
+			],
+			"name": "setKyberStorage",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_negligibleRateDiffBps",
+					"type": "uint256"
+				}
+			],
+			"name": "setNegligibleRateDiffBps",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

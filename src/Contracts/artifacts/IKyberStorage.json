@@ -1,0 +1,481 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"addKyberProxy(address,uint256)": "07f442e1",
+			"getEntitledRebateData(bytes32[])": "1dd4c3ef",
+			"getFeeAccountedData(bytes32[])": "e0fb2756",
+			"getKyberProxies()": "fa006d93",
+			"getRebateWalletsFromIds(bytes32[])": "0a3cf98e",
+			"getReserveAddressesByReserveId(bytes32)": "e4b80c4d",
+			"getReserveAddressesFromIds(bytes32[])": "d84c19c7",
+			"getReserveAddressesPerTokenSrc(address,uint256,uint256)": "d5891582",
+			"getReserveDetailsByAddress(address)": "f16e429b",
+			"getReserveDetailsById(bytes32)": "073c4c65",
+			"getReserveId(address)": "106e9a4b",
+			"getReserveIdsFromAddresses(address[])": "33825653",
+			"getReserveIdsPerTokenDest(address)": "a59b60e4",
+			"getReserveIdsPerTokenSrc(address)": "3d3dc52c",
+			"getReservesData(bytes32[],address,address)": "50dceb74",
+			"isKyberProxyAdded()": "aa1da48a",
+			"removeKyberProxy(address)": "803d58c8",
+			"setContracts(address,address)": "d8952a49",
+			"setKyberDaoContract(address)": "6ff277de"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "kyberProxy",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "maxApprovedProxies",
+					"type": "uint256"
+				}
+			],
+			"name": "addKyberProxy",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"name": "getEntitledRebateData",
+			"outputs": [
+				{
+					"internalType": "bool[]",
+					"name": "entitledRebateArr",
+					"type": "bool[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"name": "getFeeAccountedData",
+			"outputs": [
+				{
+					"internalType": "bool[]",
+					"name": "feeAccountedArr",
+					"type": "bool[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getKyberProxies",
+			"outputs": [
+				{
+					"internalType": "contract IKyberNetworkProxy[]",
+					"name": "",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"name": "getRebateWalletsFromIds",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "rebateWallets",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "reserveId",
+					"type": "bytes32"
+				}
+			],
+			"name": "getReserveAddressesByReserveId",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "reserveAddresses",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"name": "getReserveAddressesFromIds",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "reserveAddresses",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "token",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "startIndex",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "endIndex",
+					"type": "uint256"
+				}
+			],
+			"name": "getReserveAddressesPerTokenSrc",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "reserveAddresses",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "reserve",
+					"type": "address"
+				}
+			],
+			"name": "getReserveDetailsByAddress",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "reserveId",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "address",
+					"name": "rebateWallet",
+					"type": "address"
+				},
+				{
+					"internalType": "enum IKyberStorage.ReserveType",
+					"name": "resType",
+					"type": "uint8"
+				},
+				{
+					"internalType": "bool",
+					"name": "isFeeAccountedFlag",
+					"type": "bool"
+				},
+				{
+					"internalType": "bool",
+					"name": "isEntitledRebateFlag",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "reserveId",
+					"type": "bytes32"
+				}
+			],
+			"name": "getReserveDetailsById",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "reserveAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "rebateWallet",
+					"type": "address"
+				},
+				{
+					"internalType": "enum IKyberStorage.ReserveType",
+					"name": "resType",
+					"type": "uint8"
+				},
+				{
+					"internalType": "bool",
+					"name": "isFeeAccountedFlag",
+					"type": "bool"
+				},
+				{
+					"internalType": "bool",
+					"name": "isEntitledRebateFlag",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "reserve",
+					"type": "address"
+				}
+			],
+			"name": "getReserveId",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "reserveId",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address[]",
+					"name": "reserveAddresses",
+					"type": "address[]"
+				}
+			],
+			"name": "getReserveIdsFromAddresses",
+			"outputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"name": "getReserveIdsPerTokenDest",
+			"outputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "contract IERC20",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"name": "getReserveIdsPerTokenSrc",
+			"outputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32[]",
+					"name": "reserveIds",
+					"type": "bytes32[]"
+				},
+				{
+					"internalType": "contract IERC20",
+					"name": "src",
+					"type": "address"
+				},
+				{
+					"internalType": "contract IERC20",
+					"name": "dest",
+					"type": "address"
+				}
+			],
+			"name": "getReservesData",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "areAllReservesListed",
+					"type": "bool"
+				},
+				{
+					"internalType": "bool[]",
+					"name": "feeAccountedArr",
+					"type": "bool[]"
+				},
+				{
+					"internalType": "bool[]",
+					"name": "entitledRebateArr",
+					"type": "bool[]"
+				},
+				{
+					"internalType": "contract IKyberReserve[]",
+					"name": "reserveAddresses",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "isKyberProxyAdded",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "kyberProxy",
+					"type": "address"
+				}
+			],
+			"name": "removeKyberProxy",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_kyberFeeHandler",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_kyberMatchingEngine",
+					"type": "address"
+				}
+			],
+			"name": "setContracts",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_kyberDao",
+					"type": "address"
+				}
+			],
+			"name": "setKyberDaoContract",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

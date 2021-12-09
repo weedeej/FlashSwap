@@ -106,7 +106,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_fee",
+						"name": "_dummyParam",
 						"type": "uint256"
 					},
 					{
@@ -157,18 +157,34 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_tokenBorrow",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_amount",
+						"name": "amt",
 						"type": "uint256"
 					}
 				],
-				"name": "testFlashSwap",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "test",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "worst",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -180,34 +196,6 @@
 					}
 				],
 				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_sender",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_amount0",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_amount1",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
-					}
-				],
-				"name": "uniswapV2Call",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -281,10 +269,10 @@
 	},
 	"sources": {
 		"Flashloan.sol": {
-			"keccak256": "0xa6a388271ed94aa667a598bf7756a108f4dfe4e39ecab79ba4393187be5edeb1",
+			"keccak256": "0x6976c25e3d514404653d8acf54224c61adbbd8c4fef5538c2cd2b901e90afe8b",
 			"urls": [
-				"bzz-raw://f2b749726ac4d4b47d9b9185c046cc63d2555f166bf22766d2a82b4969a101bc",
-				"dweb:/ipfs/QmRT3LmU1uueLZFTEVjLErjBGu2FNURUY5q8jC7Rj5ixCp"
+				"bzz-raw://f02743580c3719f1e78eef63522872bd86f4b9b757c50d6cbfd8a058dece157c",
+				"dweb:/ipfs/QmdeBLeRvUecP3jBfwGG13ruMvoUsUZicThwCkE3cvJPuw"
 			]
 		},
 		"node_modules/@openzeppelin/contracts/access/Ownable.sol": {
@@ -304,19 +292,19 @@
 			]
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-			"keccak256": "0xca0c2396dbeb3503b51abf4248ebf77a1461edad513c01529df51850a012bee3",
+			"keccak256": "0x977b83d350bd4961dcbb2804174a0cc15685c76a575f09f34e2e016029cacabe",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://991b44ff44e0496e8554a90f4c0512c28faed45104d40430019f3c67ea67740e",
-				"dweb:/ipfs/Qmc3nRapVbcctELoZS5qe17zLkFB3bETBfwzCTMF1CSuGE"
+				"bzz-raw://a51762f894dbeb296462fb00d49482debb1b029b76f5e6df8528828bfce26b97",
+				"dweb:/ipfs/QmYh3cubEZEMCJQFEBmHCtaP3JMAuZ4WNpQ5QcTgq59NvX"
 			]
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-			"keccak256": "0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5",
+			"keccak256": "0x5c99c26cba04882d6cf71f2004af17ecd366d1edd281f94645ead365fbfcf16e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08",
-				"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC"
+				"bzz-raw://7890857ce2b63821bb357de01455247c3dcfb03c032a0aaeebcc373b7dd51cf5",
+				"dweb:/ipfs/QmbpNvNdrNQq29k1JjHCE5onRUrmz19JvYcSnbW3gGWvZA"
 			]
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
@@ -341,6 +329,13 @@
 			"urls": [
 				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
 				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"src/Contracts/KyberNetwork.sol": {
+			"keccak256": "0xbf1a72b7ce8b506136fa75588a0ce5a4d8fe46989ccbaf30b3792e3aba235ada",
+			"urls": [
+				"bzz-raw://9de9672b7355a840c52adfead93c0ef8b57711a1be96a385883b8631adacc512",
+				"dweb:/ipfs/QmQqTaTktJGtw1rfgtomPsouEHZimDfjHSqq2AHeULzUR2"
 			]
 		},
 		"src/Interfaces/FlashLoanReceiverBase.sol": {

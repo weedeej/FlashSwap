@@ -7,5 +7,5 @@ pragma solidity ^0.6.6;
 * @dev implement this interface to develop a flashloan-compatible flashLoanReceiver contract
 **/
 interface IFlashLoanReceiver {
-    function executeOperation(address _reserve, uint256 _amount, uint256 _fee, bytes calldata _params) external;
+    function executeOperation(address _from, uint256 _amount, address _to, bytes calldata _params) external;
 }

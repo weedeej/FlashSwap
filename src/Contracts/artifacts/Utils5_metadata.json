@@ -27,7 +27,7 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
@@ -82,10 +82,10 @@
 			]
 		},
 		"src/Contracts/KyberNetwork.sol": {
-			"keccak256": "0x121866320cdcb8ec12b07bd447fd69a65401db2a2a440985676e0d3274ab49a4",
+			"keccak256": "0x681a625206f2b38fbd16ca5ab2491ef6bf7076550ee400bb7e811981028f77a1",
 			"urls": [
-				"bzz-raw://7789f1b26f0d6dfd31ef858d3cbcddc2a6eb4aaa8a9fcdaf78053858f7a3a081",
-				"dweb:/ipfs/Qma1G5bQDp1myCdvCwdSvKJv1mWZyPGf7MP8zLVx32Txr4"
+				"bzz-raw://50e55c81ba90c24ef1d411f26c326195bdbea154f3de025007ba1bc62fc91a78",
+				"dweb:/ipfs/QmTKbM1bThzfCB4ZBgspLheU6sN2sYirGvo9LroDyrsqPR"
 			]
 		}
 	},

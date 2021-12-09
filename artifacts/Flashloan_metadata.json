@@ -80,6 +80,35 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amt",
+						"type": "uint256"
+					}
+				],
+				"name": "TestKyber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "returnVal",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "addressesProvider",
 				"outputs": [
@@ -96,7 +125,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_reserve",
+						"name": "_from",
 						"type": "address"
 					},
 					{
@@ -105,9 +134,9 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_dummyParam",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
 					},
 					{
 						"internalType": "bytes",
@@ -150,35 +179,6 @@
 				"inputs": [],
 				"name": "renounceOwnership",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amt",
-						"type": "uint256"
-					}
-				],
-				"name": "test",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "returnVal",
-						"type": "uint256"
-					}
-				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -237,7 +237,7 @@
 		"userdoc": {
 			"kind": "user",
 			"methods": {
-				"executeOperation(address,uint256,uint256,bytes)": {
+				"executeOperation(address,uint256,address,bytes)": {
 					"notice": "This function is called after your contract has received the flash loaned amount"
 				},
 				"flashloan(address)": {
@@ -257,17 +257,17 @@
 			"bytecodeHash": "ipfs"
 		},
 		"optimizer": {
-			"enabled": false,
+			"enabled": true,
 			"runs": 200
 		},
 		"remappings": []
 	},
 	"sources": {
 		"Flashloan.sol": {
-			"keccak256": "0xb9029018acaf7613df3041e5d821dc4109b1bca9a1a7c8f5e8b4891258a22cd0",
+			"keccak256": "0x1216eeda719d584337f7f679bb56ad886e48f4bd2a683e5c96e1d686a1199cd2",
 			"urls": [
-				"bzz-raw://e42b05340fd9cbebfb885ddaf95e3d0dfc5f196d5ca2ac7a9e46bbd330e2ad15",
-				"dweb:/ipfs/QmXNa9J9dJ74SHNsisPaXMkfadZho1xpMNxo7rvE6bnrZh"
+				"bzz-raw://4a216f19042bb00e08cd66ee027c6b4417d2e069c5c32e95daec137ea01bcd95",
+				"dweb:/ipfs/QmNmS63muteCZYdNPmGQEfurLZShSzgxovHAPU5baMcnCF"
 			]
 		},
 		"node_modules/@openzeppelin/contracts/access/Ownable.sol": {
@@ -327,10 +327,10 @@
 			]
 		},
 		"src/Contracts/KyberNetwork.sol": {
-			"keccak256": "0x121866320cdcb8ec12b07bd447fd69a65401db2a2a440985676e0d3274ab49a4",
+			"keccak256": "0x681a625206f2b38fbd16ca5ab2491ef6bf7076550ee400bb7e811981028f77a1",
 			"urls": [
-				"bzz-raw://7789f1b26f0d6dfd31ef858d3cbcddc2a6eb4aaa8a9fcdaf78053858f7a3a081",
-				"dweb:/ipfs/Qma1G5bQDp1myCdvCwdSvKJv1mWZyPGf7MP8zLVx32Txr4"
+				"bzz-raw://50e55c81ba90c24ef1d411f26c326195bdbea154f3de025007ba1bc62fc91a78",
+				"dweb:/ipfs/QmTKbM1bThzfCB4ZBgspLheU6sN2sYirGvo9LroDyrsqPR"
 			]
 		},
 		"src/Interfaces/FlashLoanReceiverBase.sol": {
@@ -341,10 +341,10 @@
 			]
 		},
 		"src/Interfaces/IFlashLoanReceiver.sol": {
-			"keccak256": "0x94878bc394e739d2779a2f9bcce9e4546b7c159c675e2fcda932b8607a8d15f6",
+			"keccak256": "0xc688ebe5803548214c24ee3ba93795b962ed9710ba19d8af3ab08d88264d29e8",
 			"urls": [
-				"bzz-raw://0cd4bffa082a578f84da3dad7148cf01bc4084a50e6dd02610c68ccdb3d52fc6",
-				"dweb:/ipfs/Qmc4j6RCggqhYJhvsqz1BoShnR5sSoAeLmXDuoPmDsSttz"
+				"bzz-raw://64afe8c4d3bcf6f8dfd6a1e4ecb333ceb2f3911a585b76171f8d714a040fd6de",
+				"dweb:/ipfs/QmQr3WMsfkcFvrwmzTQUAwgmv6RTkaqWpKUxnnzY2dD9ev"
 			]
 		},
 		"src/Interfaces/ILendingPool.sol": {

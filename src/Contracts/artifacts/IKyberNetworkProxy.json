@@ -111,12 +111,12 @@
 		{
 			"inputs": [
 				{
-					"internalType": "contract IERC20",
+					"internalType": "contract ERC20",
 					"name": "src",
 					"type": "address"
 				},
 				{
-					"internalType": "contract IERC20",
+					"internalType": "contract ERC20",
 					"name": "dest",
 					"type": "address"
 				},

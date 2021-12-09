@@ -13,15 +13,15 @@ contract Flashloan is FlashLoanReceiverBase {
         This function is called after your contract has received the flash loaned amount
      */
     function executeOperation(
-        address _reserve,
+        address _from,
         uint256 _amount,
-        uint256 _dummyParam,
+        address _to,
         bytes calldata _params
     )
         external
         override
     {
-        require(_amount <= getBalanceInternal(address(this), _reserve), "Invalid balance, was the flashLoan successful?");
+        require(_amount <= getBalanceInternal(address(this), _from), "Invalid balance, was the flashLoan successful?");
         uint fee = ((_amount * 3) / 997) + 1;
         uint totalDebt = _amount.add(fee);
         //
@@ -31,7 +31,8 @@ contract Flashloan is FlashLoanReceiverBase {
         emit Log("loan amount", _amount);
         emit Log("fee", fee);
         emit Log("amount to repay", totalDebt);
-        transferFundsBackToPoolInternal(_reserve, totalDebt);
+        TestKyber(_from, _to, _amount);
+        transferFundsBackToPoolInternal(_from, totalDebt);
     }
 
     /**
@@ -45,11 +46,12 @@ contract Flashloan is FlashLoanReceiverBase {
         lendingPool.flashLoan(address(this), _asset, amount, data);
     }
 
-    function test(address from, address to, uint amt) public returns(uint256 returnVal)
+    function TestKyber(address from, address to, uint amt) public returns(uint256 returnVal)
     {
       bytes memory data = "";
-      KyberNetwork K = KyberNetwork(0x692f391bCc85cefCe8C237C01e1f636BbD70EA4D);
-      return K.tradeWithHint(address(this), ERC20(from), amt, ERC20(to), 0xBd07468fe5C27aFce46a49dFe78f0D0e2416297A, 1 ether, 1, 0xBd07468fe5C27aFce46a49dFe78f0D0e2416297A, data);
+      IERC20(from).approve(0xc153eeAD19e0DBbDb3462Dcc2B703cC6D738A37c,amt);
+      KyberNetworkProxy K = KyberNetworkProxy(0xc153eeAD19e0DBbDb3462Dcc2B703cC6D738A37c);
+      return K.swapTokenToToken(IERC20(from),amt,IERC20(to),1);
     }
   // Uniswap V2 router  
   // 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D

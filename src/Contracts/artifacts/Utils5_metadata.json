@@ -1,20 +1,16 @@
 {
 	"compiler": {
-		"version": "0.6.12+commit.27d51765"
+		"version": "0.6.6+commit.6c089d02"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [],
 		"devdoc": {
-			"kind": "dev",
 			"methods": {},
-			"title": "Kyber utility file mostly shared constants and rate calculation helpers inherited by most of kyber contracts. previous utils implementations are for previous solidity versions.",
-			"version": 1
+			"title": "Kyber utility file mostly shared constants and rate calculation helpers inherited by most of kyber contracts. previous utils implementations are for previous solidity versions."
 		},
 		"userdoc": {
-			"kind": "user",
-			"methods": {},
-			"version": 1
+			"methods": {}
 		}
 	},
 	"settings": {
@@ -35,7 +31,6 @@
 	"sources": {
 		"node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
 			"keccak256": "0x2fedd3a10f0d561aa6edfb743d3a854a3e92f7ff3d7f294de259cd779177e134",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://53ecf080278d4c9be7d289c04a029d58f2e7e48c5a39b067ee9af3be7360bb95",
 				"dweb:/ipfs/QmeRMHESDb6PnYBiYhpkQnHQSjZAdtWJwPxZYfNuXpfZkL"
@@ -43,7 +38,6 @@
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
 			"keccak256": "0x977b83d350bd4961dcbb2804174a0cc15685c76a575f09f34e2e016029cacabe",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://a51762f894dbeb296462fb00d49482debb1b029b76f5e6df8528828bfce26b97",
 				"dweb:/ipfs/QmYh3cubEZEMCJQFEBmHCtaP3JMAuZ4WNpQ5QcTgq59NvX"
@@ -51,7 +45,6 @@
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
 			"keccak256": "0x5c99c26cba04882d6cf71f2004af17ecd366d1edd281f94645ead365fbfcf16e",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://7890857ce2b63821bb357de01455247c3dcfb03c032a0aaeebcc373b7dd51cf5",
 				"dweb:/ipfs/QmbpNvNdrNQq29k1JjHCE5onRUrmz19JvYcSnbW3gGWvZA"
@@ -59,7 +52,6 @@
 		},
 		"node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
 			"keccak256": "0xf12dfbe97e6276980b83d2830bb0eb75e0cf4f3e626c2471137f82158ae6a0fc",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://b3a849c2d95e85463909e5b5c920b13e7a11216ca14127085e16d22b9379d52a",
 				"dweb:/ipfs/QmUg3CZDbCCcQdroEpexBy5ZFd5vD1UWijWQq9qHZjtJNQ"
@@ -67,7 +59,6 @@
 		},
 		"node_modules/@openzeppelin/contracts/utils/Address.sol": {
 			"keccak256": "0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c",
 				"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN"
@@ -75,17 +66,16 @@
 		},
 		"node_modules/@openzeppelin/contracts/utils/Context.sol": {
 			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
-			"license": "MIT",
 			"urls": [
 				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
 				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
 			]
 		},
 		"src/Contracts/KyberNetwork.sol": {
-			"keccak256": "0x681a625206f2b38fbd16ca5ab2491ef6bf7076550ee400bb7e811981028f77a1",
+			"keccak256": "0x4acfa4f195a27ab28aac57940eeb23eb48306bf7718147c451f892f4f5ef27be",
 			"urls": [
-				"bzz-raw://50e55c81ba90c24ef1d411f26c326195bdbea154f3de025007ba1bc62fc91a78",
-				"dweb:/ipfs/QmTKbM1bThzfCB4ZBgspLheU6sN2sYirGvo9LroDyrsqPR"
+				"bzz-raw://0d5e007b3bb88ab9a6ae2cbaca4d2da8ca1da339b30c56a57a2219b2b6be60a4",
+				"dweb:/ipfs/QmZSkEdykZzpxKUEESHTMAK4fLaCeP6twhnE1kC3d4Qi7i"
 			]
 		}
 	},

@@ -628,7 +628,7 @@ contract KyberNetworkProxy is
     event KyberNetworkSet(IKyberNetwork newKyberNetwork, IKyberNetwork previousKyberNetwork);
     event KyberHintHandlerSet(IKyberHint kyberHintHandler);
 
-    constructor(address _admin) public WithdrawableNoModifiers(_admin) {
+    constructor(address payable _admin) public WithdrawableNoModifiers(_admin) {
         /*empty body*/
     }
 

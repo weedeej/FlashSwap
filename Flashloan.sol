@@ -28,10 +28,10 @@ contract Flashloan is FlashLoanReceiverBase {
         // Your logic goes here.
         // !! Ensure that *this contract* has enough of `_reserve` funds to payback the `_fee` !!
         //
-        emit Log("loan amount", _amount);
-        emit Log("fee", fee);
-        emit Log("amount to repay", totalDebt);
-        TestKyber(_from, _to, _amount);
+        //emit Log("loan amount", _amount);
+        //emit Log("fee", fee);
+        //emit Log("amount to repay", totalDebt);
+        TestKyber(payable(_from), payable (_to), _amount);
         transferFundsBackToPoolInternal(_from, totalDebt);
     }
 
@@ -46,12 +46,21 @@ contract Flashloan is FlashLoanReceiverBase {
         lendingPool.flashLoan(address(this), _asset, amount, data);
     }
 
-    function TestKyber(address from, address to, uint amt) public returns(uint256 returnVal)
+    function TestKyber(address payable from, address payable to, uint amt) public returns(uint256)
     {
       bytes memory data = "";
-      IERC20(from).approve(0xc153eeAD19e0DBbDb3462Dcc2B703cC6D738A37c,amt);
+      IERC20(from).approve(address(this),amt);
       KyberNetworkProxy K = KyberNetworkProxy(0xc153eeAD19e0DBbDb3462Dcc2B703cC6D738A37c);
       return K.swapTokenToToken(IERC20(from),amt,IERC20(to),1);
+    }
+
+    function TestUniswap(address from, address to, uint amt) public returns(uint)
+    {
+        address[] memory path;
+        path[0] = from;
+        path[1] = to;
+        UniswapV2Router02 V = new UniswapV2Router02(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f, 0xd0A1E359811322d97991E03f863a0C30C2cF029C);
+        return V.swapExactTokensForTokens(amt, 1, path, address(this), 0)[0];
     }
   // Uniswap V2 router  
   // 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
@@ -59,5 +68,5 @@ contract Flashloan is FlashLoanReceiverBase {
   address private constant WETH = 0xd0A1E359811322d97991E03f863a0C30C2cF029C ;
   // Uniswap V2 factory
   address private constant FACTORY = 0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f;
-  event Log(string message, uint val);
+  //event Log(string message, uint val);
 }
